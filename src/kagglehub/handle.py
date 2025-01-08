@@ -194,7 +194,7 @@ def parse_notebook_handle(handle: str) -> NotebookHandle:
             dataset=parts[1],
             version=version,
         )
-    
+
     elif len(parts) == NUM_UNVERSIONED_NOTEBOOK_PARTS:
         # Unversioned handle
         # e.g.: <owner>/<notebook>
@@ -203,6 +203,6 @@ def parse_notebook_handle(handle: str) -> NotebookHandle:
             notebook=parts[1],
             version=None,
         )
-    
+
     msg = f"Invalid notebook handle: {handle}"
     raise ValueError(msg)
